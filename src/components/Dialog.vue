@@ -6,6 +6,7 @@
       <v-card-text>
         <div class="captcha-container" v-html="captcha.data || `<div />`"></div>
         <v-form
+          v-on:submit.prevent
           ref="form"
           v-model="isValid"
           lazy-validation
