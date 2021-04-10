@@ -10,7 +10,10 @@ async function init() {
   );
   let MATCHES = data.match(/url\(.*ttf\)/gm);
   let matchList = MATCHES.map((match) => {
-    return match.replace(/^url\(/, "").replace(/\)$/, "");
+    return match
+      .replace(/^url\(/, "")
+      .replace(/\)$/, "")
+      .replace(/^http/, "https");
   });
   fs.writeFileSync(
     `${path.resolve("./")}/fontSheet.json`,
