@@ -81,9 +81,6 @@ export default {
       isValid: false,
     };
   },
-  mounted() {
-    console.log(this.captcha.text);
-  },
   computed: {
     title() {
       let str = "verify your identity to ";
